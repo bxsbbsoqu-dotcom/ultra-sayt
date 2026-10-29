@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ultra Sayt — O‘yinlar olami</title>
+  <meta name="description" content="Ultra Sayt — PUBG, Minecraft, GTA va boshqa mashhur o‘yinlar haqida yangiliklar, tavsiflar va foydali ma’lumotlar.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b12;
+      color: white;
+    }
+
+    header {
+      padding: 24px 7%;
+      background: #141421;
+      border-bottom: 1px solid #292940;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: #8c7bff;
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 16px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 20px;
+      background: linear-gradient(135deg, #201044, #10182c, #0b0b12);
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      margin: 0 0 15px;
+    }
+
+    .hero span {
+      color: #9a8cff;
+    }
+
+    .hero p {
+      color: #d0d0e0;
+      line-height: 1.6;
+    }
+
+    .search {
+      width: min(100%, 440px);
+      padding: 14px;
+      margin-top: 18px;
+      border: 1px solid #6556bd;
+      border-radius: 10px;
+      background: #171725;
+      color: white;
+      font-size: 16px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 20px;
+    }
+
+    h2 {
+      margin-bottom: 22px;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #171725;
+      border: 1px solid #292940;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .game-image {
+      height: 135px;
+      display: grid;
+      place-items: center;
+      font-size: 58px;
+      background: linear-gradient(135deg, #322060, #182b46);
+    }
+
+    .card-content {
+      padding: 18px;
+    }
+
+    .card p {
+      color: #c2c2d2;
+      line-height: 1.5;
+    }
+
+    .tag {
+      display: inline-block;
+      color: #c6bcff;
+      background: #30264d;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .empty {
+      display: none;
+      color: #d0d0e0;
+      padding: 20px 0;
+    }
+
+    .about {
+      margin-top: 45px;
+      padding: 24px;
+      background: #141421;
+      border-radius: 14px;
+      line-height: 1.7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #b7b7c9;
+      border-top: 1px solid #292940;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">⚡ ULTRA SAYT</div>
+    <nav>
+      <a href="#games">O‘yinlar</a>
+      <a href="#about">Biz haqimizda</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>O‘yinlar <span>olamiga</span> xush kelibsiz!</h1>
+    <p>Sevimli o‘yinlaring haqida yangi ma’lumotlarni kashf et.</p>
+    <input
+      class="search"
+      id="search"
+      type="search"
+      placeholder="O‘yin qidirish..."
+      aria-label="O‘yin qidirish"
+    >
+  </section>
+
+  <main>
+    <section id="games">
+      <h2>🎮 Mashhur o‘yinlar</h2>
+
+      <div class="games" id="gameList">
+        <article class="card" data-name="pubg mobile">
+          <div class="game-image">🎯</div>
+          <div class="card-content">
+            <span class="tag">Battle Royale</span>
+            <h3>PUBG Mobile</h3>
+            <p>Omon qolish va jamoa bilan kurashishga asoslangan mashhur mobil o‘yin.</p>
+          </div>
+        </article>
+
+        <article class="card" data-name="minecraft">
+          <div class="game-image">🧱</div>
+          <div class="card-content">
+            <span class="tag">Sarguzasht</span>
+            <h3>Minecraft</h3>
+            <p>Bloklardan uylar qur, yangi joylarni o‘rgan va o‘z dunyongni yarat.</p>
+          </div>
+        </article>
+[28.10.2026 20:23] 🦈Jamoliddin🦈: <article class="card" data-name="gta v gta 5">
+          <div class="game-image">🚘</div>
+          <div class="card-content">
+            <span class="tag">Ochiq dunyo</span>
+            <h3>GTA V</h3>
+            <p>Katta shahar, turli transportlar va ko‘plab topshiriqlarga ega o‘yin.</p>
+          </div>
+        </article>
+
+        <article class="card" data-name="efootball futbol">
+          <div class="game-image">⚽</div>
+          <div class="card-content">
+            <span class="tag">Sport</span>
+            <h3>eFootball</h3>
+            <p>Futbol o‘yna, jamoangni tuz va maydonda mahoratingni ko‘rsat.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="empty" id="empty">Bu nomdagi o‘yin topilmadi.</p>
+    </section>
+
+    <section class="about" id="about">
+      <h2>Ultra Sayt haqida</h2>
+      <p>
+        Ultra Sayt — o‘yin ishqibozlari uchun yaratilgan
+        boshlang‘ich loyiha. Bu yerda turli o‘yinlar haqida
+        ma’lumotlar bilan tanishishing mumkin.
+      </p>
+      <p>Sayt muallifi: Ultra Sayt jamoasi.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Ultra Sayt | O‘yinlar olami
+  </footer>
+
+  <script>
+    const search = document.getElementById("search");
+    const cards = document.querySelectorAll(".card");
+    const empty = document.getElementById("empty");
+
+    search.addEventListener("input", function () {
+      const query = search.value.toLowerCase().trim();
+      let visible = 0;
+
+      cards.forEach(function (card) {
+        const text = (
+          card.dataset.name + " " + card.innerText
+        ).toLowerCase();
+
+        const match = text.includes(query);
+        card.style.display = match ? "" : "none";
+
+        if (match) visible++;
+      });
+
+      empty.style.display = visible ? "none" : "block";
+    });
+  </script>
+</body>
+</html>
